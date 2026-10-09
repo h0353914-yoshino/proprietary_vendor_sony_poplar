@@ -4,6 +4,7 @@
 
 soong_namespace {
     imports: [
+        "device/sony/poplar",
         "device/sony/yoshino-common",
         "hardware/qcom-caf/msm8998",
         "vendor/sony/yoshino-common",
@@ -41,6 +42,43 @@ cc_prebuilt_library_shared {
 }
 
 cc_prebuilt_binary {
+    name: "android.hardware.nfc@1.2-service-cxd22xx",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/hw/android.hardware.nfc@1.2-service-cxd22xx",
+            ],
+            shared_libs: [
+                "libnfc_hal_shim",
+                "libbase",
+                "libcutils",
+                "libhardware",
+                "liblog",
+                "libutils",
+                "android.hardware.nfc@1.0",
+                "android.hardware.nfc@1.1",
+                "android.hardware.nfc@1.2",
+                "libhidlbase",
+                "libhidltransport",
+                "libhwbinder",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
+    relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
     name: "fpc_fingerprint@2.1_HIDL-service",
     owner: "sony",
     target: {
@@ -74,5 +112,32 @@ cc_prebuilt_binary {
     },
     prefer: true,
     relative_install_path: "hw",
+    soc_specific: true,
+}
+
+cc_prebuilt_binary {
+    name: "snfcboot",
+    owner: "sony",
+    target: {
+        android_arm64: {
+            srcs: [
+                "proprietary/vendor/bin/snfcboot",
+            ],
+            shared_libs: [
+                "liblog",
+                "libcrypto",
+                "libcutils",
+                "libc++",
+                "libc",
+                "libm",
+                "libdl",
+            ],
+        },
+    },
+    compile_multilib: "64",
+    strip: {
+        none: true,
+    },
+    prefer: true,
     soc_specific: true,
 }

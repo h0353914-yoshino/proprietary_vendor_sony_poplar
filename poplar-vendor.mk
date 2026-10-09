@@ -86,6 +86,10 @@ PRODUCT_COPY_FILES += \
     vendor/sony/poplar/proprietary/vendor/camera/SOI13BS1/scene_detector.dat:$(TARGET_COPY_OUT_VENDOR)/camera/SOI13BS1/scene_detector.dat \
     vendor/sony/poplar/proprietary/vendor/etc/ad_calib.cfg:$(TARGET_COPY_OUT_VENDOR)/etc/ad_calib.cfg \
     vendor/sony/poplar/proprietary/vendor/etc/audio_policy_volumes.xml:$(TARGET_COPY_OUT_VENDOR)/etc/audio_policy_volumes.xml \
+    vendor/sony/poplar/proprietary/vendor/etc/libnfc-cxd-224x02010010.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-cxd-224x02010010.conf \
+    vendor/sony/poplar/proprietary/vendor/etc/libnfc-cxd-224x02310011.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-cxd-224x02310011.conf \
+    vendor/sony/poplar/proprietary/vendor/etc/libnfc-cxd22xx.conf:$(TARGET_COPY_OUT_VENDOR)/etc/libnfc-cxd22xx.conf \
+    vendor/sony/poplar/proprietary/vendor/etc/nfc_settings.conf:$(TARGET_COPY_OUT_VENDOR)/etc/nfc_settings.conf \
     vendor/sony/poplar/proprietary/vendor/etc/qdcm_calib_data_6.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_6.xml \
     vendor/sony/poplar/proprietary/vendor/etc/qdcm_calib_data_9.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_9.xml \
     vendor/sony/poplar/proprietary/vendor/etc/sensors/sensor_def_somc_product.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_somc_product.conf \
@@ -93,6 +97,8 @@ PRODUCT_COPY_FILES += \
     vendor/sony/poplar/proprietary/vendor/etc/touch/images/big_touch.png:$(TARGET_COPY_OUT_VENDOR)/etc/touch/images/big_touch.png \
     vendor/sony/poplar/proprietary/vendor/etc/touch/images/splash.png:$(TARGET_COPY_OUT_VENDOR)/etc/touch/images/splash.png \
     vendor/sony/poplar/proprietary/vendor/etc/wifi/bdwlan.bin:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/bdwlan.bin \
+    vendor/sony/poplar/proprietary/vendor/firmware/cxd224x_firmware_ES1.0.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cxd224x_firmware_ES1.0.bin \
+    vendor/sony/poplar/proprietary/vendor/firmware/cxd224x_firmware_ES1.1.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/cxd224x_firmware_ES1.1.bin \
     vendor/sony/poplar/proprietary/vendor/firmware/touch_module_id_0xe0.img:$(TARGET_COPY_OUT_VENDOR)/firmware/touch_module_id_0xe0.img \
     vendor/sony/poplar/proprietary/vendor/firmware/touch_module_id_0xe1.img:$(TARGET_COPY_OUT_VENDOR)/firmware/touch_module_id_0xe1.img \
     vendor/sony/poplar/proprietary/vendor/firmware/tzfingerprint.b01:$(TARGET_COPY_OUT_VENDOR)/firmware/tzfingerprint.b01 \
@@ -101,4 +107,6 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     lib_fpc_tac_shared \
-    fpc_fingerprint@2.1_HIDL-service
+    android.hardware.nfc@1.2-service-cxd22xx \
+    fpc_fingerprint@2.1_HIDL-service \
+    snfcboot
