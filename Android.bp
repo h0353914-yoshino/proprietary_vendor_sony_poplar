@@ -141,3 +141,10 @@ cc_prebuilt_binary {
     prefer: true,
     soc_specific: true,
 }
+
+install_symlink {
+    name: "vendor_etc_qdcm_calib_data_default_xml",
+    soc_specific: true,
+    installed_location: "etc/qdcm_calib_data_default.xml",
+    symlink_target: "/vendor/etc/qdcm_calib_data_6.xml",
+}

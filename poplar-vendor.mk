@@ -110,3 +110,6 @@ PRODUCT_PACKAGES += \
     android.hardware.nfc@1.2-service-cxd22xx \
     fpc_fingerprint@2.1_HIDL-service \
     snfcboot
+
+PRODUCT_PACKAGES += \
+    vendor_etc_qdcm_calib_data_default_xml
